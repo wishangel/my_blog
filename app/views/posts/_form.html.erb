@@ -1,0 +1,6 @@
+<%= form_for @post do |f| %>
+	<P>タイトル<%= f.text_field :title %></p>
+	<p>記事内容<%= f.text_area :body %></p>
+	<p>カテゴリー<%= f.text_field :category %></p>
+	<%= f.submit "登録" %>
+<% end %>

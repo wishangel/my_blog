@@ -1,0 +1,22 @@
+<h1>記事一覧</h1>
+<div class = "col_sm_8">
+<% @posts.each do |post|%>
+<li>
+	<P><%= post.title %></p>
+	<p><%= truncate post.body,:length =>50,:omission => '...'%></p>
+	
+	<p><%= post.category %></p>
+	<a><%= link_to 'Show', "/my_blogs/#{post.id}" %></a>
+	<%= link_to 'Edit', "/my_blogs/#{post.id}/edit" %></a>
+</li>
+<% end %>
+</div>
+<div class = "col-sm-4">
+	<p>Author Name:<%= @author.name %></p>
+	<p>Description:<%= @author.description %></p>
+	<p>Author Image:<%= @author.image_url %></p>
+	<% @recently_posts.each do |f| %>
+	<p><%= f.title %></p>
+</div>
+
+

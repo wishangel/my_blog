@@ -6,4 +6,5 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-Post.create(title:'記事２',body:"記事の中身",category:'日常')
+# Post.create(title:'記事２',body:"記事の中身うううううううううううううううううううううううううううううううううううううううううううううううううううううううううううううううううううう",category:'日常')
+Author.create(name:'Akihiko Yamagata',description:'rails 頑張ります！',image_url:'no image')

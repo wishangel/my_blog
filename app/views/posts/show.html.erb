@@ -1,0 +1,12 @@
+<p>
+	<b><%= @post.title %></b>
+</p>
+<p>
+	<b><%= @post.body %></b>
+</p>
+<p>
+	<b><%= @post.category%></b>
+</p>
+<%= link_to '戻る', root_path %>
+<%= link_to '削除', "/my_blogs/#{@post.id}" ,method: :delete%>
+<%= link_to 'hogehoge' "/my_blogs/#{@post.id}"%>
