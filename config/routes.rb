@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   
   
+  devise_for :authors
   get 'my_blogs/:id/edit' => 'posts#edit'
   patch 'my_blogs/:id' => 'posts#update'
   get 'my_blogs/:id' => 'posts#show' , as: :post

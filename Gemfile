@@ -23,7 +23,23 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
+gem 'kaminari'
+
+gem 'devise'
+
+# pry関連
+gem 'pry-rails' 
+# rails cの対話式コンソールがirbの代わりにリッチなpryになる
+gem 'pry-doc'
+# pry中に show-source [method名] でソース内を読める
+gem 'pry-byebug' 
+# binding.pryをソースに記載すると、ブレイクポイントとなりデバッグが可能になる
+gem 'pry-stack_explorer'
+ # pry中にスタックを上がったり下がったり行き来できる
+gem 'pry-nav'
+
 # Use ActiveModel has_secure_password
+
 # gem 'bcrypt', '~> 3.1.7'
 
 # Use Unicorn as the app server

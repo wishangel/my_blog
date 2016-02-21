@@ -1,11 +1,15 @@
 class PostsController < ApplicationController
+	
+	before_action :authenticate_author!, only: [:new, :create, :edit, :update, :destroy]
+
 	def show
 		@post = Post.find(params[:id])
+		@comment = Comment.new
 	end
 	def index
-		@posts = Post.all
-		@author = Author.all
-		@recently_posts = Post.order(:created_at).limit(5)
+		@posts = Post.page(params[:page]).per(10).order(:created_at).reverse_order
+		@author = Author.find(4)
+		@recently_posts = Post.order(:created_at).limit(5).reverse_order
 	end
 	def new
 		@post = Post.new
